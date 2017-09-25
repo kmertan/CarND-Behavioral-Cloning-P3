@@ -130,7 +130,7 @@ Then I repeated this process on track two in order to get more data points.
 To augment the data sat, I also flipped images and angles thinking that this would provide more examples of right turns, since the first track contains primarily left turns. For example, here is an image that has then been flipped:
 
 ![Unflipped Image](./examples/center_2017_09_18_21_23_40_324.jpg)
-![Flipped Image](‘./examples/center_2017_09_18_21_23_40_324 flipped.jpg’)
+![Flipped Image](./examples/center_2017_09_18_21_23_40_324_flipped.jpg)
 
 After the collection process, I had 14121 number of data points. This includes the left, right and center images. Including the flipped images, I had 28242 total data points. I then preprocessed this data by cropping and normalizing it within the pipeline so that new images would be preprocessed in the same way.
 
