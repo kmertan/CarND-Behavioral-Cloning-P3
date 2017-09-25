@@ -92,7 +92,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes:
+The final model architecture (model.py lines 79-100) consisted of a convolution neural network with the following layers and layer sizes:
 
 * Lambda layer - normalizes the image
 * Cropping layer - hones in on relevant parts of the image (excludes the sky and hood of the vehicle)
@@ -120,17 +120,17 @@ To capture good driving behavior, I first recorded two laps on track one using c
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to get back on track if it ever found itself off off-roading. These images show what a recovery looks like starting from the dirt road on the first track:
 
-![Center Lane Driving](./examples/center_2017_09_16_23_30_40_213.jpg)
-![Center Lane Driving](./examples/center_2017_09_16_23_30_40_688.jpg)
-![Center Lane Driving](./examples/center_2017_09_16_23_30_41_131.jpg)
-![Center Lane Driving](./examples/center_2017_09_16_23_30_43_259.jpg)
+![Recovery 1](./examples/center_2017_09_16_23_30_40_213.jpg)
+![Recovery 2](./examples/center_2017_09_16_23_30_40_688.jpg)
+![Recovery 3](./examples/center_2017_09_16_23_30_41_131.jpg)
+![Recovery 4](./examples/center_2017_09_16_23_30_43_259.jpg)
 
 Then I repeated this process on track two in order to get more data points.
 
 To augment the data sat, I also flipped images and angles thinking that this would provide more examples of right turns, since the first track contains primarily left turns. For example, here is an image that has then been flipped:
 
-![Center Lane Driving](./examples/center_2017_09_18_21_23_40_324.jpg)
-![Center Lane Driving](./examples/‘center_2017_09_18_21_23_40_324 flipped.jpg’)
+![Unflipped Image](./examples/center_2017_09_18_21_23_40_324.jpg)
+![Flipped Image](‘./examples/center_2017_09_18_21_23_40_324 flipped.jpg’)
 
 After the collection process, I had 14121 number of data points. This includes the left, right and center images. Including the flipped images, I had 28242 total data points. I then preprocessed this data by cropping and normalizing it within the pipeline so that new images would be preprocessed in the same way.
 
